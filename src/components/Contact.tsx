@@ -54,13 +54,13 @@ export default function Contact() {
 
       {/* Icons */}
       <div className="mt-10 flex justify-center gap-6 text-2xl text-gray-300">
-        <a href="https://github.com/yourusername" target="_blank" className="hover:text-white">
+        <a href="https://github.com/minhdq2512" target="_blank" className="hover:text-white">
           <FaGithub />
         </a>
-        <a href="mailto:yourname@gmail.com" className="hover:text-white">
+        <a href="mailto:minhdq2512@gmail.com" className="hover:text-white">
           <FaEnvelope />
         </a>
-        <a href="https://linkedin.com/in/yourusername" target="_blank" className="hover:text-white">
+        <a href="https://www.linkedin.com/in/minh-dinh-quang-94250325a/" target="_blank" className="hover:text-white">
           <FaLinkedin />
         </a>
       </div>

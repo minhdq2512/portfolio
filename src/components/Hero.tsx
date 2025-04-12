@@ -1,4 +1,4 @@
-import avatar from "./../assets/MinhDinhQuang.png"
+import avatar from "./../assets/MinhDinhQuang.png";
 
 export default function Hero() {
   return (
@@ -10,10 +10,11 @@ export default function Hero() {
             Dinh Quang Minh
           </h1>
           <p className="text-gray-400 mb-8">
-            Intro text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Frontend developer by day, stackoverflow copy-paster by night 🌙{" "}
           </p>
           <a
-            href="#"
+            href="/DinhQuangMinh-resume.pdf"
+            download
             className="bg-green-600 hover:bg-green-700 text-white font-semibold px-6 py-3 rounded-md shadow-lg shadow-green-500/30 transition"
           >
             My resume here
@@ -29,8 +30,6 @@ export default function Hero() {
           />
         </div>
       </div>
-
-    
     </section>
   );
 }
