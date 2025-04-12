@@ -7,7 +7,6 @@ export default function Contact() {
       <div className="text-center mb-12">
         <h2 className="text-3xl md:text-4xl font-bold">Get In Touch</h2>
         <p className="text-gray-400 mt-4 max-w-xl mx-auto">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </p>
       </div>
 

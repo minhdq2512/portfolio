@@ -10,7 +10,7 @@ export default function Navbar() {
     <header className="fixed top-0 left-0 right-0 z-50 flex justify-center px-4">
       <div className="w-full max-w-7xl bg-[#1a1a1a] rounded-b-xl px-6 md:px-12 py-4 flex justify-between items-center shadow-md">
         {/* Logo */}
-        <div className="text-white font-bold text-lg">Portfolio</div>
+        <div className="text-white font-bold text-lg">QuangMinh</div>
 
         {/* Desktop Menu */}
         <nav className="hidden md:flex gap-8 text-sm text-gray-300">
@@ -38,13 +38,13 @@ export default function Navbar() {
     >
       About Me
     </a>
-    <a
+    {/* <a
       href="#skills"
       className="hover:text-green-400 transition-colors duration-200"
       onClick={() => setIsOpen(false)}
     >
       Skills
-    </a>
+    </a> */}
     <a
       href="#projects"
       className="hover:text-green-400 transition-colors duration-200"
