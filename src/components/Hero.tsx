@@ -7,7 +7,7 @@ export default function Hero() {
 {/* LEFT - TEXT */}
 <div className="md:w-1/2 mb-10 md:mb-0 text-center md:text-left">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            Dinh Quang Minh
+            Hello, I'm Minh
           </h1>
           <p className="text-gray-400 mb-8">
             Frontend developer by day, stackoverflow copy-paster by night 🌙{" "}
