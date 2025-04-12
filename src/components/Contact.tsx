@@ -7,7 +7,7 @@ export default function Contact() {
       <div className="text-center mb-12">
         <h2 className="text-3xl md:text-4xl font-bold">Get In Touch</h2>
         <p className="text-gray-400 mt-4 max-w-xl mx-auto">
-        </p>
+        Let’s connect — I’d love to hear from you!</p>
       </div>
 
       {/* Form */}

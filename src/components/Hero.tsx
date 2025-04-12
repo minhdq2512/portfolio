@@ -3,9 +3,9 @@ import avatar from "./../assets/MinhDinhQuang.png";
 export default function Hero() {
   return (
     <section className="bg-black text-white px-6 md:px-20 py-30">
-      <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between">
-        {/* LEFT - TEXT */}
-        <div className="md:w-1/2 mb-10 md:mb-0">
+<div className="max-w-5xl mx-auto flex flex-col-reverse md:flex-row items-center justify-between">
+{/* LEFT - TEXT */}
+<div className="md:w-1/2 mb-10 md:mb-0 text-center md:text-left">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
             Dinh Quang Minh
           </h1>
