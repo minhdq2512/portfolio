@@ -1,4 +1,4 @@
-import avatar from "./../assets/MinhDinhQuang.png"
+import avatar from "./../assets/MinhDinh.jpg"
 
 export default function AboutMe() {
   return (
