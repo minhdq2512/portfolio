@@ -86,7 +86,7 @@ export default function Hero() {
 
         {/* SVG IMAGE */}
         <motion.div
-          className="mt-12 flex justify-center"
+          className="mt-6 flex justify-center"
           initial={{ opacity: 0, y: 50 }}
           animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
           transition={{ duration: 1 }}
@@ -94,7 +94,7 @@ export default function Hero() {
           <img
             src={uploadedImage}
             alt="Hero Devices"
-            className="w-2/5 h-auto rounded-lg shadow-md hover:scale-105 transition-all duration-500"
+            className="mt-14 w-2/5 h-auto rounded-lg shadow-md hover:scale-105 transition-all duration-500"
           />
         </motion.div>
       </section>

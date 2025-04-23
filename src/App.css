@@ -41,4 +41,34 @@
   color: #888;
 } */
 
+/* Heart shape CSS */
+.heart-shape {
+  position: relative;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: #f87171; /* Tailwind red-500 */
+  border-radius: 50%;
+  transform: rotate(-45deg);
+}
+
+.heart-shape::before,
+.heart-shape::after {
+  content: "";
+  position: absolute;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: #f87171; /* Tailwind red-500 */
+  border-radius: 50%;
+}
+
+.heart-shape::before {
+  top: -0.5rem;
+  left: 0;
+}
+
+.heart-shape::after {
+  top: 0;
+  left: -0.5rem;
+}
+
 
