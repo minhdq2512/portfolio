@@ -24,12 +24,15 @@ export default function Projects() {
   const [hovered, setHovered] = useState(false);
   const [tooltip, setTooltip] = useState({ x: 0, y: 0, text: "" });
 
-  const handleMouseEnter = (e, desc) => {
+  const handleMouseEnter = (
+    e: React.MouseEvent<HTMLDivElement>,
+    desc: string
+  ) => {
     setHovered(true);
     setTooltip({ x: e.clientX, y: e.clientY, text: desc });
   };
 
-  const handleMouseMove = (e) => {
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     const tooltipWidth = 250;
     const maxLeft = window.innerWidth - tooltipWidth - 20;
     setTooltip((prev) => ({
