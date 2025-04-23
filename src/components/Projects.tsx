@@ -24,15 +24,12 @@ export default function Projects() {
   const [hovered, setHovered] = useState(false);
   const [tooltip, setTooltip] = useState({ x: 0, y: 0, text: "" });
 
-  const handleMouseEnter = (
-    e: React.MouseEvent<HTMLDivElement>,
-    desc: string
-  ) => {
+  const handleMouseEnter = (e, desc) => {
     setHovered(true);
     setTooltip({ x: e.clientX, y: e.clientY, text: desc });
   };
 
-  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+  const handleMouseMove = (e) => {
     const tooltipWidth = 250;
     const maxLeft = window.innerWidth - tooltipWidth - 20;
     setTooltip((prev) => ({
@@ -53,7 +50,7 @@ export default function Projects() {
     <section
       id="projects"
       ref={ref}
-      className="bg-white text-black px-6 md:px-20 min-h-screen flex items-center relative"
+      className="bg-gray-900 text-white px-6 md:px-20 py-24 min-h-screen"
     >
       <motion.div
         className="w-full"
@@ -63,8 +60,8 @@ export default function Projects() {
       >
         {/* Heading */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold">Projects</h2>
-          <p className="text-gray-500 mt-4 max-w-xl mx-auto">
+          <h2 className="text-4xl font-bold text-gray-100">Projects</h2>
+          <p className="text-gray-400 mt-4 max-w-xl mx-auto text-lg">
             Some projects I have contributed to
           </p>
         </div>
@@ -72,28 +69,32 @@ export default function Projects() {
         {/* Projects Grid */}
         <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
           {projects.map((proj, index) => (
-            <div key={index}>
-              <div
-                className="relative"
-                onMouseEnter={(e) => handleMouseEnter(e, proj.desc)}
-                onMouseMove={handleMouseMove}
-                onMouseLeave={handleMouseLeave}
-              >
-                <img
-                  src={proj.img}
-                  alt={proj.title}
-                  className="rounded-lg w-full h-64 object-cover shadow-md"
-                />
+            <motion.div
+              key={index}
+              className="relative bg-gray-800 rounded-lg overflow-hidden shadow-lg transform transition duration-500 hover:scale-105 hover:shadow-xl"
+              onMouseEnter={(e) => handleMouseEnter(e, proj.desc)}
+              onMouseMove={handleMouseMove}
+              onMouseLeave={handleMouseLeave}
+            >
+              {/* Image with overlay */}
+              <img
+                src={proj.img}
+                alt={proj.title}
+                className="w-full h-64 object-cover"
+              />
+              <div className="absolute inset-0 bg-black bg-opacity-50 flex justify-center items-center opacity-0 hover:opacity-100 transition-opacity duration-300">
+                <h3 className="text-xl text-white font-semibold">{proj.title}</h3>
               </div>
-              <h3 className="text-xl font-semibold mt-4">{proj.title}</h3>
-              <a
-                href={proj.link}
-                className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white text-sm font-semibold px-5 py-2 rounded transition shadow-lg mt-2"
-              >
-                Know more
-                <ArrowRight className="w-4 h-4" />
-              </a>
-            </div>
+              <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black to-transparent opacity-80">
+                <a
+                  href={proj.link}
+                  className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white text-sm font-semibold px-5 py-2 rounded transition shadow-lg"
+                >
+                  Know more
+                  <ArrowRight className="w-4 h-4" />
+                </a>
+              </div>
+            </motion.div>
           ))}
         </div>
       </motion.div>
@@ -101,9 +102,7 @@ export default function Projects() {
       {/* Tooltip */}
       {hovered && (
         <div
-          className={`fixed z-50 bg-black text-white text-xs px-4 py-2 rounded shadow-md pointer-events-none max-w-xs transition-opacity duration-300 ${
-            hovered ? "opacity-100" : "opacity-0"
-          }`}
+          className={`fixed z-50 bg-black text-white text-xs px-4 py-2 rounded shadow-md pointer-events-none max-w-xs transition-opacity duration-300 opacity-100`}
           style={{
             top: tooltip.y + 10,
             left: tooltip.x + 10,

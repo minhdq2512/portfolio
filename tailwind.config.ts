@@ -21,6 +21,9 @@ const config: Config = {
         "slide-in-left": "slide-in-left 0.8s ease-out forwards",
         "fade-in-scale": "fade-in-scale 1s ease-out forwards",
       },
+      fontFamily: {
+        retro: ['"Press Start 2P"', 'cursive'],
+      },
     },
   },
   plugins: [],

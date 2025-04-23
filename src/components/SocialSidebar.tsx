@@ -11,20 +11,20 @@ export default function SocialSidebar() {
       <a
           href="https://github.com/minhdq2512"
           target="_blank"
-          className="hover:text-green-500 transition"
+          className="hover:text-indigo-500 transition"
         >
           <FaGithub />
         </a>
         <a
           href="mailto:minhdq2512@gmail.com"
-          className="hover:text-green-500 transition"
+          className="hover:text-indigo-500 transition"
         >
           <FaEnvelope />
         </a>
         <a
           href="https://www.linkedin.com/in/minh-dinh-quang-94250325a/"
           target="_blank"
-          className="hover:text-green-500 transition"
+          className="hover:text-indigo-500 transition"
         >
           <FaLinkedin />
         </a>
